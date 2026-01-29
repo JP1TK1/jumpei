@@ -37,6 +37,8 @@ const translations = {
 
     // Works
     'works.title': 'Works',
+    'works.more': 'More',
+    'works.less': 'Less',
     'works.blackthunder.title': 'ブラックサンダー ブランディング',
     'works.blackthunder.desc': 'キャンペーン制作企画・ディレクション',
     'works.park24.title': 'PARK24データ移管',
@@ -49,6 +51,22 @@ const translations = {
     'works.ip.desc': 'PR企画、ブランディング',
     'works.scm.title': 'SCM ワークフローデザイン',
     'works.scm.desc': 'モックアップ/デモ動画作成',
+    'works.plastic.title': 'プラスチックスマート 総合ディレクション',
+    'works.plastic.desc': '総合ディレクター',
+    'works.plantech.title': 'プランテック コンサルティング',
+    'works.plantech.desc': '採用動画制作ディレクション',
+    'works.undr12.title': 'UNDR12',
+    'works.undr12.desc': 'サービス開発/運営',
+    'works.ietsuna.title': 'いえつなキッチン',
+    'works.ietsuna.desc': 'サービス開発/運営',
+    'works.plan.title': 'Planinternational',
+    'works.plan.desc': '広告制作ディレクション',
+    'works.shochiku.title': '松竹新規イベント',
+    'works.shochiku.desc': 'イベントプロデュース/PRプランニング',
+    'works.hanamori.title': 'ハナエモリ リブランディング',
+    'works.hanamori.desc': 'リブランディングバイブル制作',
+    'works.jr.title': 'JR東海プロモーション',
+    'works.jr.desc': 'プロジェクトマネジメント',
 
     // About
     'about.title': 'About',
@@ -88,6 +106,8 @@ const translations = {
 
     // Works
     'works.title': 'Works',
+    'works.more': 'More',
+    'works.less': 'Less',
     'works.blackthunder.title': 'Black Thunder Branding',
     'works.blackthunder.desc': 'Campaign Planning & Direction',
     'works.park24.title': 'PARK24 Data Migration',
@@ -100,6 +120,22 @@ const translations = {
     'works.ip.desc': 'PR Planning, Branding',
     'works.scm.title': 'SCM Workflow Design',
     'works.scm.desc': 'Mockup / Demo Video Creation',
+    'works.plastic.title': 'Plastic Smart Direction',
+    'works.plastic.desc': 'General Director',
+    'works.plantech.title': 'Plantech Consulting',
+    'works.plantech.desc': 'Recruitment Video Direction',
+    'works.undr12.title': 'UNDR12',
+    'works.undr12.desc': 'Service Development & Operations',
+    'works.ietsuna.title': 'Ietsuna Kitchen',
+    'works.ietsuna.desc': 'Service Development & Operations',
+    'works.plan.title': 'Plan International',
+    'works.plan.desc': 'Advertising Direction',
+    'works.shochiku.title': 'Shochiku New Event',
+    'works.shochiku.desc': 'Event Production & PR Planning',
+    'works.hanamori.title': 'Hanae Mori Rebranding',
+    'works.hanamori.desc': 'Rebranding Bible Creation',
+    'works.jr.title': 'JR Central Promotion',
+    'works.jr.desc': 'Project Management',
 
     // About
     'about.title': 'About',

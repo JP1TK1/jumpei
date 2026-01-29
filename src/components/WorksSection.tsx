@@ -1,10 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const WorksSection = () => {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -25,37 +27,23 @@ const WorksSection = () => {
   }, []);
 
   const works = [
-    { 
-      titleKey: 'works.blackthunder.title', 
-      descKey: 'works.blackthunder.desc',
-      color: 'bg-amber-400/20'
-    },
-    { 
-      titleKey: 'works.park24.title', 
-      descKey: 'works.park24.desc',
-      color: 'bg-blue-400/20'
-    },
-    { 
-      titleKey: 'works.immersive.title', 
-      descKey: 'works.immersive.desc',
-      color: 'bg-purple-400/20'
-    },
-    { 
-      titleKey: 'works.3darvi.title', 
-      descKey: 'works.3darvi.desc',
-      color: 'bg-cyan-400/20'
-    },
-    { 
-      titleKey: 'works.ip.title', 
-      descKey: 'works.ip.desc',
-      color: 'bg-pink-400/20'
-    },
-    { 
-      titleKey: 'works.scm.title', 
-      descKey: 'works.scm.desc',
-      color: 'bg-green-400/20'
-    },
+    { titleKey: 'works.blackthunder.title', descKey: 'works.blackthunder.desc', color: 'bg-amber-400/20' },
+    { titleKey: 'works.park24.title', descKey: 'works.park24.desc', color: 'bg-blue-400/20' },
+    { titleKey: 'works.immersive.title', descKey: 'works.immersive.desc', color: 'bg-purple-400/20' },
+    { titleKey: 'works.3darvi.title', descKey: 'works.3darvi.desc', color: 'bg-cyan-400/20' },
+    { titleKey: 'works.ip.title', descKey: 'works.ip.desc', color: 'bg-pink-400/20' },
+    { titleKey: 'works.scm.title', descKey: 'works.scm.desc', color: 'bg-green-400/20' },
+    { titleKey: 'works.plastic.title', descKey: 'works.plastic.desc', color: 'bg-teal-400/20' },
+    { titleKey: 'works.plantech.title', descKey: 'works.plantech.desc', color: 'bg-orange-400/20' },
+    { titleKey: 'works.undr12.title', descKey: 'works.undr12.desc', color: 'bg-red-400/20' },
+    { titleKey: 'works.ietsuna.title', descKey: 'works.ietsuna.desc', color: 'bg-indigo-400/20' },
+    { titleKey: 'works.plan.title', descKey: 'works.plan.desc', color: 'bg-rose-400/20' },
+    { titleKey: 'works.shochiku.title', descKey: 'works.shochiku.desc', color: 'bg-violet-400/20' },
+    { titleKey: 'works.hanamori.title', descKey: 'works.hanamori.desc', color: 'bg-fuchsia-400/20' },
+    { titleKey: 'works.jr.title', descKey: 'works.jr.desc', color: 'bg-sky-400/20' },
   ];
+
+  const displayedWorks = isExpanded ? works : works.slice(0, 6);
 
   return (
     <section 
@@ -71,7 +59,7 @@ const WorksSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {works.map((work, index) => (
+          {displayedWorks.map((work, index) => (
             <div
               key={work.titleKey}
               className={`group relative overflow-hidden rounded-lg cursor-pointer
@@ -95,6 +83,30 @@ const WorksSection = () => {
             </div>
           ))}
         </div>
+
+        {works.length > 6 && (
+          <div className={`flex justify-center mt-10 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`} style={{ transitionDelay: '600ms' }}>
+            <Button
+              variant="outline"
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="gap-2"
+            >
+              {isExpanded ? (
+                <>
+                  {t('works.less')}
+                  <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  {t('works.more')}
+                  <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
