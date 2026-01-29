@@ -18,7 +18,7 @@ const translations = {
 
     // Hero
     'hero.title': 'Jumpei Takei',
-    'hero.subtitle': 'Business Producer / Creative Director',
+    'hero.subtitle': 'Business Producer / AI Engineer / Strategic Consultant',
 
     // Skills
     'skills.title': 'Skills',
@@ -41,17 +41,23 @@ const translations = {
     'works.less': 'Less',
     'works.blackthunder.title': 'ブラックサンダー ブランディング',
     'works.blackthunder.desc': 'キャンペーン制作企画・ディレクション',
+    'works.xlarge.title': 'XLARGE中東ブランド展開',
+    'works.xlarge.desc': 'Middle East Area ディレクター',
+    'works.one.title': 'ONE サイト新サービス開発',
+    'works.one.desc': '企画/サービスデザイナー',
+    'works.portland.title': 'US Portland 植物工場Start Upサポート',
+    'works.portland.desc': '戦略策定/資本制作',
     'works.park24.title': 'PARK24データ移管',
     'works.park24.desc': 'データ移管システムの要件定義、ワークフローデザイン',
-    'works.immersive.title': 'イマーシブ体験設計',
+    'works.immersive.title': 'ドーム型イマーシブ施設構築',
     'works.immersive.desc': '企画、設計、施工管理',
-    'works.3darvi.title': '航空気象システム 海外戦略',
+    'works.3darvi.title': '航空気象システム「3D ARVI」海外戦略',
     'works.3darvi.desc': '海外営業',
-    'works.ip.title': 'IP活用事業',
+    'works.ip.title': '漫画IP活用イマーシブ体験設計',
     'works.ip.desc': 'PR企画、ブランディング',
     'works.scm.title': 'SCM ワークフローデザイン',
     'works.scm.desc': 'モックアップ/デモ動画作成',
-    'works.plastic.title': 'プラスチックスマート 総合ディレクション',
+    'works.plastic.title': '環境省プラスチックスマート 総合ディレクション',
     'works.plastic.desc': '総合ディレクター',
     'works.plantech.title': 'プランテック コンサルティング',
     'works.plantech.desc': '採用動画制作ディレクション',
@@ -71,7 +77,7 @@ const translations = {
     // About
     'about.title': 'About',
     'about.name': '竹井淳平 / Jumpei Takei',
-    'about.role': 'Business Producer / Creative Director',
+    'about.role': 'Business Producer / AI Engineer / Strategic Consultant',
     'about.bio': 'ビジネスとクリエイティブの両輪を回しながら、プロジェクトを成功に導きます。複雑な課題を整理し、実現可能な形に落とし込むことが得意です。',
 
     // Contact
@@ -87,7 +93,7 @@ const translations = {
 
     // Hero
     'hero.title': 'Jumpei Takei',
-    'hero.subtitle': 'Business Producer / Creative Director',
+    'hero.subtitle': 'Business Producer / AI Engineer / Strategic Consultant',
 
     // Skills
     'skills.title': 'Skills',
@@ -110,17 +116,23 @@ const translations = {
     'works.less': 'Less',
     'works.blackthunder.title': 'Black Thunder Branding',
     'works.blackthunder.desc': 'Campaign Planning & Direction',
+    'works.xlarge.title': 'XLARGE Middle East Brand Expansion',
+    'works.xlarge.desc': 'Middle East Area Director',
+    'works.one.title': 'ONE Site New Service Development',
+    'works.one.desc': 'Planning / Service Designer',
+    'works.portland.title': 'US Portland Plant Factory Start Up Support',
+    'works.portland.desc': 'Strategy Planning / Capital Production',
     'works.park24.title': 'PARK24 Data Migration',
     'works.park24.desc': 'Requirements Definition & Workflow Design',
-    'works.immersive.title': 'Immersive Experience Design',
+    'works.immersive.title': 'Dome-type Immersive Facility Construction',
     'works.immersive.desc': 'Planning, Design, Construction Management',
-    'works.3darvi.title': 'Aviation Weather System',
+    'works.3darvi.title': 'Aviation Weather System "3D ARVI" Global Strategy',
     'works.3darvi.desc': 'International Sales',
-    'works.ip.title': 'IP Utilization Business',
+    'works.ip.title': 'Manga IP Immersive Experience Design',
     'works.ip.desc': 'PR Planning, Branding',
     'works.scm.title': 'SCM Workflow Design',
     'works.scm.desc': 'Mockup / Demo Video Creation',
-    'works.plastic.title': 'Plastic Smart Direction',
+    'works.plastic.title': 'Ministry of Environment Plastic Smart Direction',
     'works.plastic.desc': 'General Director',
     'works.plantech.title': 'Plantech Consulting',
     'works.plantech.desc': 'Recruitment Video Direction',
@@ -140,7 +152,7 @@ const translations = {
     // About
     'about.title': 'About',
     'about.name': 'Jumpei Takei',
-    'about.role': 'Business Producer / Creative Director',
+    'about.role': 'Business Producer / AI Engineer / Strategic Consultant',
     'about.bio': 'I drive projects to success by balancing business and creativity. My strength lies in organizing complex challenges and transforming them into achievable solutions.',
 
     // Contact

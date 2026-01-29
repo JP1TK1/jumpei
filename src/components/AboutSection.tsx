@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -47,9 +48,35 @@ const AboutSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
               {t('about.name')}
             </h3>
-            <p className="text-lg text-foreground/80 mb-6">
+            <p className="text-lg text-foreground/80 mb-4">
               {t('about.role')}
             </p>
+            <div className="flex gap-4 mb-6 justify-center md:justify-start">
+              <a
+                href="https://www.facebook.com/jumpei.takei/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors"
+              >
+                <Facebook className="w-5 h-5 text-foreground" />
+              </a>
+              <a
+                href="https://www.instagram.com/jumpei_takei/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors"
+              >
+                <Instagram className="w-5 h-5 text-foreground" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jumpeitakei1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors"
+              >
+                <Linkedin className="w-5 h-5 text-foreground" />
+              </a>
+            </div>
             <p className="text-foreground/70 leading-relaxed">
               {t('about.bio')}
             </p>
