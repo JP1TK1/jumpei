@@ -1,11 +1,12 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
-type Language = 'ja' | 'en';
+type Language = 'ja' | 'en' | 'ar';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  isRTL: boolean;
 }
 
 const translations = {
@@ -101,8 +102,8 @@ const translations = {
     'skills.business.desc': 'I dive deep into projects with full commitment. I quickly organize requirements from chaotic situations and somehow understand even the most abstract visions. I take responsibility, work tirelessly, and deliver results.',
     'skills.planning.title': 'Planning & Strategy',
     'skills.planning.desc': 'While organizing requirements seriously, I propose the most unconventional ideas. From conception to business plans, presentations, and implementation guides—I push beyond my assigned scope to make things happen.',
-    'skills.consulting.title': 'Consulting',
-    'skills.consulting.desc': 'I provide consulting with high energy and the latest trends. I create roadmaps from implementation requirements and design everything from organizational policies to role assignments.',
+    'skills.consulting.title': 'Global Sales Promotion',
+    'skills.consulting.desc': 'I support global expansion of businesses and products. With extensive experience in the Middle East and North America, I specialize in helping businesses that are unsure where to start, especially with market research. Saudi Arabia is my strongest network.',
     'skills.engineering.title': 'Engineering',
     'skills.engineering.desc': 'From product requirements to wireframe design, system specifications, coding, and video content creation—I handle it all. Recently, I prefer proposing AI-powered solutions that require no coding.',
     'skills.branding.title': 'Branding',
@@ -158,6 +159,81 @@ const translations = {
     // Contact
     'contact.title': 'Contact',
     'contact.cta': 'Get in Touch',
+  },
+  ar: {
+    // Header
+    'nav.skills': 'المهارات',
+    'nav.works': 'الأعمال',
+    'nav.about': 'نبذة عني',
+    'nav.contact': 'تواصل معي',
+
+    // Hero
+    'hero.title': 'جمبي تاكي',
+    'hero.subtitle': 'منتج أعمال / مهندس ذكاء اصطناعي / مستشار استراتيجي',
+
+    // Skills
+    'skills.title': 'المهارات',
+    'skills.business.title': 'تطوير الأعمال',
+    'skills.business.desc': 'أنضم إلى الفريق وأقود المشاريع بشكل استباقي. أنظم المتطلبات من المواقف الفوضوية وأفهم حتى أكثر الرؤى تجريداً. أتحمل المسؤولية وأعمل بجد لتحقيق النتائج.',
+    'skills.planning.title': 'التخطيط والاستراتيجية',
+    'skills.planning.desc': 'أقترح أفكاراً غير تقليدية مع تنظيم المتطلبات بجدية. من التصور إلى خطط العمل والعروض التقديمية وأدلة التنفيذ - أتجاوز نطاقي المحدد لإنجاز الأمور.',
+    'skills.consulting.title': 'ترويج المبيعات العالمية',
+    'skills.consulting.desc': 'أدعم التوسع العالمي للشركات والمنتجات. لدي خبرة واسعة في الشرق الأوسط وأمريكا الشمالية، متخصص في مساعدة الشركات في أبحاث السوق. المملكة العربية السعودية هي أقوى شبكتي.',
+    'skills.engineering.title': 'الهندسة',
+    'skills.engineering.desc': 'من متطلبات المنتج إلى تصميم الإطارات السلكية ومواصفات النظام والبرمجة وإنشاء محتوى الفيديو - أتعامل مع كل شيء. مؤخراً أفضل اقتراح حلول مدعومة بالذكاء الاصطناعي.',
+    'skills.branding.title': 'العلامات التجارية',
+    'skills.branding.desc': 'أطور خطط العلامات التجارية التي تلتقط المشاعر والاتجاهات الاجتماعية، وأنشئ مواد المفاهيم والمرئيات الرئيسية والنصوص والإبداعات.',
+    'skills.ai.title': 'إنشاء سير عمل الذكاء الاصطناعي',
+    'skills.ai.desc': 'أتابع أسبوعياً أحدث تقنيات الذكاء الاصطناعي التوليدي ووكلاء الذكاء الاصطناعي، وأقترح الحل الأمثل لأتمتة سير العمل. ليس مجرد استخدام سطحي، بل حلول متكاملة بشكل صحيح.',
+
+    // Works
+    'works.title': 'الأعمال',
+    'works.more': 'المزيد',
+    'works.less': 'أقل',
+    'works.blackthunder.title': 'بلاك ثاندر - العلامة التجارية',
+    'works.blackthunder.desc': 'تخطيط وإخراج الحملات',
+    'works.xlarge.title': 'توسع علامة XLARGE في الشرق الأوسط',
+    'works.xlarge.desc': 'مدير منطقة الشرق الأوسط',
+    'works.one.title': 'تطوير خدمة جديدة لموقع ONE',
+    'works.one.desc': 'تخطيط / مصمم خدمات',
+    'works.portland.title': 'دعم مصنع النباتات في بورتلاند الأمريكية',
+    'works.portland.desc': 'تخطيط استراتيجي / إنتاج رأس المال',
+    'works.park24.title': 'ترحيل بيانات PARK24',
+    'works.park24.desc': 'تعريف المتطلبات وتصميم سير العمل',
+    'works.immersive.title': 'بناء منشأة قبة غامرة',
+    'works.immersive.desc': 'تخطيط وتصميم وإدارة البناء',
+    'works.3darvi.title': 'استراتيجية عالمية لنظام الطقس الجوي "3D ARVI"',
+    'works.3darvi.desc': 'المبيعات الدولية',
+    'works.ip.title': 'تصميم تجربة غامرة لملكية فكرية مانغا',
+    'works.ip.desc': 'تخطيط العلاقات العامة، العلامات التجارية',
+    'works.scm.title': 'تصميم سير عمل SCM',
+    'works.scm.desc': 'إنشاء نموذج أولي / فيديو تجريبي',
+    'works.plastic.title': 'إخراج البلاستيك الذكي لوزارة البيئة',
+    'works.plastic.desc': 'المدير العام',
+    'works.plantech.title': 'استشارات بلانتك',
+    'works.plantech.desc': 'إخراج فيديو التوظيف',
+    'works.undr12.title': 'UNDR12',
+    'works.undr12.desc': 'تطوير وتشغيل الخدمة',
+    'works.ietsuna.title': 'مطبخ إيتسونا',
+    'works.ietsuna.desc': 'تطوير وتشغيل الخدمة',
+    'works.plan.title': 'بلان إنترناشونال',
+    'works.plan.desc': 'إخراج الإعلانات',
+    'works.shochiku.title': 'حدث شوتشيكو الجديد',
+    'works.shochiku.desc': 'إنتاج الفعاليات وتخطيط العلاقات العامة',
+    'works.hanamori.title': 'إعادة تسمية هاناي موري',
+    'works.hanamori.desc': 'إنشاء دليل إعادة التسمية',
+    'works.jr.title': 'ترويج JR Central',
+    'works.jr.desc': 'إدارة المشاريع',
+
+    // About
+    'about.title': 'نبذة عني',
+    'about.name': 'جمبي تاكي',
+    'about.role': 'منتج أعمال / مهندس ذكاء اصطناعي / مستشار استراتيجي',
+    'about.bio': 'أقود المشاريع نحو النجاح من خلال الموازنة بين الأعمال والإبداع. قوتي تكمن في تنظيم التحديات المعقدة وتحويلها إلى حلول قابلة للتحقيق.',
+
+    // Contact
+    'contact.title': 'تواصل معي',
+    'contact.cta': 'تواصل الآن',
   }
 };
 
@@ -166,12 +242,19 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('ja');
 
+  const isRTL = language === 'ar';
+
+  useEffect(() => {
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+    document.documentElement.lang = language;
+  }, [language, isRTL]);
+
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['ja']] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>
   );
