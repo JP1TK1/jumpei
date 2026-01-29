@@ -155,7 +155,7 @@ const WorksSection = () => {
       {/* Image Modal */}
       <Dialog open={!!selectedWork} onOpenChange={() => setSelectedWork(null)}>
         <DialogContent 
-          className="max-w-4xl w-[95vw] p-0 overflow-hidden data-[state=open]:duration-500 data-[state=closed]:duration-300 data-[state=open]:ease-out data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-90 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
+          className="max-w-4xl w-[95vw] p-0 overflow-hidden animate-glitch-fade-in"
           aria-describedby="work-dialog-description"
         >
           <DialogHeader className="p-4 pb-2">
@@ -166,12 +166,12 @@ const WorksSection = () => {
               {selectedWork && t(selectedWork.descKey)}
             </p>
           </DialogHeader>
-          <div className="relative w-full bg-muted flex items-center justify-center min-h-[300px]">
+          <div className="relative w-full bg-muted flex items-center justify-center min-h-[300px] glitch-overlay">
             {selectedWork?.image ? (
               <img
                 src={selectedWork.image}
                 alt={selectedWork ? t(selectedWork.titleKey) : ''}
-                className="w-full h-auto max-h-[70vh] object-contain transition-opacity duration-300"
+                className="w-full h-auto max-h-[70vh] object-contain"
               />
             ) : (
               <div className="flex flex-col items-center justify-center py-20 text-muted-foreground">
