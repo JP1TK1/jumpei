@@ -155,7 +155,7 @@ const WorksSection = () => {
       {/* Image Modal */}
       <Dialog open={!!selectedWork} onOpenChange={() => setSelectedWork(null)}>
         <DialogContent 
-          className="max-w-4xl w-[95vw] p-0 overflow-hidden duration-300 ease-out"
+          className="max-w-4xl w-[95vw] p-0 overflow-hidden data-[state=open]:duration-500 data-[state=closed]:duration-300 data-[state=open]:ease-out data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-90 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
           aria-describedby="work-dialog-description"
         >
           <DialogHeader className="p-4 pb-2">
@@ -171,7 +171,7 @@ const WorksSection = () => {
               <img
                 src={selectedWork.image}
                 alt={selectedWork ? t(selectedWork.titleKey) : ''}
-                className="w-full h-auto max-h-[70vh] object-contain animate-fade-in"
+                className="w-full h-auto max-h-[70vh] object-contain transition-opacity duration-300"
               />
             ) : (
               <div className="flex flex-col items-center justify-center py-20 text-muted-foreground">
