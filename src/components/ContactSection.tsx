@@ -41,7 +41,7 @@ const ContactSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <a
-            href="mailto:contact@example.com"
+            href="mailto:jumpei@ajfront.com"
             className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-semibold rounded-full
               hover:scale-105 hover:shadow-lg transition-all duration-300 group"
           >

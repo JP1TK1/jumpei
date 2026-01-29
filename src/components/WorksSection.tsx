@@ -28,6 +28,9 @@ const WorksSection = () => {
 
   const works = [
     { titleKey: 'works.blackthunder.title', descKey: 'works.blackthunder.desc', color: 'bg-amber-400/20' },
+    { titleKey: 'works.xlarge.title', descKey: 'works.xlarge.desc', color: 'bg-lime-400/20' },
+    { titleKey: 'works.one.title', descKey: 'works.one.desc', color: 'bg-emerald-400/20' },
+    { titleKey: 'works.portland.title', descKey: 'works.portland.desc', color: 'bg-yellow-400/20' },
     { titleKey: 'works.park24.title', descKey: 'works.park24.desc', color: 'bg-blue-400/20' },
     { titleKey: 'works.immersive.title', descKey: 'works.immersive.desc', color: 'bg-purple-400/20' },
     { titleKey: 'works.3darvi.title', descKey: 'works.3darvi.desc', color: 'bg-cyan-400/20' },
