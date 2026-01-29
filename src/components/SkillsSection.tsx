@@ -26,11 +26,11 @@ const SkillsSection = () => {
 
   const skills = [
     { icon: Rocket, titleKey: 'skills.business.title', descKey: 'skills.business.desc' },
-    { icon: Lightbulb, titleKey: 'skills.planning.title', descKey: 'skills.planning.desc' },
+    { icon: Bot, titleKey: 'skills.ai.title', descKey: 'skills.ai.desc' },
     { icon: MessageSquare, titleKey: 'skills.consulting.title', descKey: 'skills.consulting.desc' },
     { icon: Code, titleKey: 'skills.engineering.title', descKey: 'skills.engineering.desc' },
     { icon: Palette, titleKey: 'skills.branding.title', descKey: 'skills.branding.desc' },
-    { icon: Bot, titleKey: 'skills.ai.title', descKey: 'skills.ai.desc' },
+    { icon: Lightbulb, titleKey: 'skills.planning.title', descKey: 'skills.planning.desc' },
   ];
 
   return (
